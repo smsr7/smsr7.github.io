@@ -2,7 +2,7 @@ let s;
 let scl = 15;
 
 function setup() {
-  createCanvas(windowWidth-30, windowHeight-30);
+  createCanvas(windowWidth-50, windowHeight-50);
   s = new Snake();
   f = new food()
   f.getLocation();
@@ -25,7 +25,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth-50, windowHeight-50);
 }
 
 function food(){
