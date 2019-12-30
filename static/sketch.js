@@ -2,7 +2,7 @@ let s;
 let scl = 15;
 
 function setup() {
-  createCanvas(windowWidth-50, windowHeight-50);
+  createCanvas(windowWidth, windowHeight);
   s = new Snake();
   f = new food()
   f.getLocation();
@@ -25,7 +25,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth-50, windowHeight-50);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function food(){
@@ -52,7 +52,7 @@ function keyPressed() {
 
 function Snake() {
   this.init = function(){
-    this.pos = createVector(width/2, height/2);
+    this.pos = createVector(floor(random(floor(width / scl))) * scl, floor(random(floor(height / scl))) * scl);
     this.velX = 0;
     this.velY = 0;
     this.length = 0;
