@@ -1,8 +1,8 @@
 let s;
-let scl = 15;
+let scl = 20;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight-10);
+  createCanvas(windowWidth-1, windowHeight-121);
   s = new Snake();
   f = new food()
   f.getLocation();
@@ -13,7 +13,7 @@ function setup() {
 
 
 function draw() {
-  background(25);
+  background(80,80,80);
   f.show();
   s.update();
   s.show();
@@ -25,7 +25,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight-10);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function food(){
@@ -33,7 +33,7 @@ function food(){
     this.pos = createVector(floor(random(floor(width / scl))) * scl, floor(random(floor(height / scl))) * scl)
   };
   this.show = function(){
-    fill(1,255,0);
+    fill(0, 102, 153, 250);
     rect(this.pos.x, this.pos.y, scl, scl)
   };
 }
@@ -101,8 +101,11 @@ function Snake() {
 
   this.show = function() {
     for(var i = 0; i<this.body.length; i++){
-      fill(255);
+      fill(255, 255, 255, 255);
       rect(this.body[i].x, this.body[i].y, scl, scl);
     }
+  //  textSize(100);
+    //fill(0, 102, 153, 250);
+    //text('Sami Saliba', 10, 80);
   };
 }

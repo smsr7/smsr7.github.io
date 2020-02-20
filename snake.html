@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Sami Saliba</h1>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style>
+    window.addEventListener("keydown", function(e) {
+        // space, page up, page down and arrow keys:
+        if([32, 33, 34, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }, false);
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+
+    <script src="./static/sketch.js"></script>
+  </head>
+  <body>
+    <button type="button" id="githubButton" onclick="window.open('https://github.com/smsr7')"></button>
+  </body>
+
+</html>
